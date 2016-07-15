@@ -15,10 +15,22 @@ class MasterViewController: UITableViewController {
     
     var bokningsArray: [Bokning] = []
     var bokning1: Bokning?
+    var bokning2: Bokning?
     
-    let dos1: Doss = Doss(dossNr: "50002222", dossNamn: "Hannes Töllborg")
-    let dos2: Doss = Doss(dossNr: "50001111", dossNamn: "Mohamad Sadiq")
+    let dosA1: Doss = Doss(dossNr: "50002222", dossNamn: "Hannes Töllborg")
+    let dosA2: Doss = Doss(dossNr: "50001111", dossNamn: "Mohamad Sadiq")
+    let dosA3: Doss = Doss(dossNr: "50003333", dossNamn: "Ha Nguyen")
+    let dosA4: Doss = Doss(dossNr: "50004444", dossNamn: "Anders Mickelsson")
+    
+    let dosB1: Doss = Doss(dossNr: "50002222", dossNamn: "Erik Odell")
+    let dosB2: Doss = Doss(dossNr: "50001111", dossNamn: "Tommy Nilsson")
+    let dosB3: Doss = Doss(dossNr: "50003333", dossNamn: "Kjell-Inge Gustavsson")
+    let dosB4: Doss = Doss(dossNr: "50004444", dossNamn: "Rickard Fält")
+    //let dos5: Doss = Doss(dossNr: "5000555", dossNamn: "Kjell-Inge Gustavsson")
+    
     let reseInfo: ReseInfo = ReseInfo(avresa: "2016-07-13:15.40", ankomst: "2016-07-13:19.01", reseNotering: "Mycket Packning")
+    
+    let reseInfo2: ReseInfo = ReseInfo(avresa: "2016-07-13:15.40", ankomst: "2016-07-13:19.01", reseNotering: "Ska direkt till sjukhuset")
     
 
 
@@ -27,8 +39,10 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.bokning1 = Bokning(bokningsNummer: "AAAAA", dossar: [dos1, dos2], reseInfo: reseInfo)
-        self.bokningsArray.append(bokning1!)
+        self.bokning1 = Bokning(bokningsNummer: "AAAAA", bokningsAdress: "Storgatan 66, Lgh: 2200", dossar: [dosA1, dosA2, dosA3, dosA4], reseInfo: reseInfo)
+        
+        self.bokning2 = Bokning(bokningsNummer: "BBBBB", bokningsAdress: "Lillgatan 55, Lgh:1100", dossar: [dosB4, dosB3, dosB2, dosB1], reseInfo: reseInfo2)
+        self.bokningsArray = [bokning1!, bokning2!]
         
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 //

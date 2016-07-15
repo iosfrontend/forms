@@ -19,6 +19,12 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var dosTable: UITableView!
     
     
+    @IBOutlet weak var avresaLabel: UILabel!
+    
+    @IBOutlet weak var ankomstLabel: UILabel!
+    
+    @IBOutlet weak var boendeLabel: UILabel!
+    
     var detailItem: Bokning? {
         didSet {
             // Update the view.
@@ -34,7 +40,19 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
             
             if let bokning = self.bokningsNummer {
-                bokning.text = detail.bokningsNummer
+                bokning.text = "Bokningsnummer: " + detail.bokningsNummer
+            }
+            
+            if let avresa = self.avresaLabel {
+                avresa.text = "Avresa: " + detail.reseInfo.avresa
+            }
+            
+            if let ankomst = self.ankomstLabel {
+                ankomst.text = "Ankomst: " + detail.reseInfo.ankomst
+            }
+            
+            if let adress = self.boendeLabel {
+                adress.text = "Boende: " + detail.bokningsAdress
             }
         }
     }
@@ -53,7 +71,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return  (detailItem?.dossar.count)!
+        return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,7 +80,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("dossCell", forIndexPath: indexPath)
-            cell.textLabel?.text = (detailItem?.dossar[indexPath.row].dossNr)! + ", " + (detailItem?.dossar[indexPath.row].dossNamn)!
+            cell.textLabel?.text = (detailItem?.dossar[indexPath.row].dossNr)! + " " + (detailItem?.dossar[indexPath.row].dossNamn)!
         return cell
     }
     
