@@ -81,6 +81,7 @@ class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("dossCell", forIndexPath: indexPath)
             cell.textLabel?.text = (detailItem?.dossar[indexPath.row].dossNr)! + " " + (detailItem?.dossar[indexPath.row].dossNamn)!
+            cell.textLabel?.textColor = UIColor .whiteColor()
         return cell
     }
     

@@ -70,7 +70,7 @@
                                                         <rect key="frame" x="0.0" y="28" width="300" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="OLj-63-M8u" id="yaf-rG-3K5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <color key="backgroundColor" red="0.45098039220000002" green="0.23137254900000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -203,6 +203,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="K5Y-36-ZxV"/>
                                 <exclude reference="3H9-DQ-hgl"/>
                                 <exclude reference="8gH-Vs-xFm"/>
                                 <exclude reference="Asp-i4-dg7"/>
@@ -216,7 +217,6 @@
                                 <exclude reference="m7f-k8-xbf"/>
                                 <exclude reference="n7q-W5-Tub"/>
                                 <exclude reference="wk0-KA-RQM"/>
-                                <exclude reference="K5Y-36-ZxV"/>
                                 <exclude reference="kSV-pA-h4d"/>
                             </mask>
                         </variation>
@@ -275,11 +275,13 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.45098039220000002" green="0.23137254900000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.45098039220000002" green="0.23137254900000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="showDetail" id="6S0-TO-JiA"/>
                                 </connections>
